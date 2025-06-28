@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Blob Animations */
+@keyframes blob1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -40px) scale(1.15); }
+}
+
+@keyframes blob2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, 50px) scale(1.1); }
+}
+
+@layer utilities {
+  .animate-blob1 {
+    animation: blob1 25s ease-in-out infinite;
+  }
+
+  .animate-blob2 {
+    animation: blob2 35s ease-in-out infinite;
+  }
+}
+
+@keyframes blob1 {
+  0%, 100% { transform: translate(0px, 0px); }
+  50% { transform: translate(30px, 60px); }
+}
+
+@keyframes blob2 {
+  0%, 100% { transform: translate(0px, 0px); }
+  50% { transform: translate(-40px, -30px); }
+}
+
+.animate-blob1 {
+  animation: blob1 18s ease-in-out infinite;
+}
+
+.animate-blob2 {
+  animation: blob2 22s ease-in-out infinite;
+}
+
+@layer base {
+  h1 {
+    @apply font-serif;
+  }
+}
+.aos-section {
+  opacity: 0;
+}
+.aos-section[data-aos] {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
