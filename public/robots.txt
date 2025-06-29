@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://turnlogicai.com/sitemap.xml
